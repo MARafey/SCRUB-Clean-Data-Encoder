@@ -1,0 +1,122 @@
+{
+  "split": "test",
+  "step": 0,
+  "n_queries": 249,
+  "n_canonical": 1656,
+  "query_instruction": "none",
+  "doc_instruction": "none",
+  "retrieval": {
+    "recall@1": 0.7911646586345381,
+    "recall@5": 0.8995983935742972,
+    "recall@10": 0.9156626506024096,
+    "mrr": 0.8420780739996392,
+    "median_rank": 1.0,
+    "mean_rank": 5.357429718875502
+  },
+  "diagnostics": {
+    "positive_similarity": 0.8134859204292297,
+    "positive_similarity_std": 0.1558006852865219,
+    "hardest_negative_similarity": 0.7752198576927185,
+    "separation_margin": 0.03826606273651123
+  },
+  "cell_no_abstention": {
+    "detection": {
+      "precision": 0.9237536656891495,
+      "recall": 0.9968354430379747,
+      "f1": 0.9589041095890409,
+      "tp": 1260,
+      "fp": 104,
+      "fn": 4
+    },
+    "correction": {
+      "precision": 0.8101173020527859,
+      "recall": 0.9963931469792606,
+      "f1": 0.8936514355034372,
+      "tp": 1105,
+      "fp": 259,
+      "fn": 4
+    }
+  },
+  "best_correction": {
+    "threshold": 0.5,
+    "detection_precision": 0.9237536656891495,
+    "detection_recall": 0.9968354430379747,
+    "detection_f1": 0.9589041095890409,
+    "correction_precision": 0.8101173020527859,
+    "correction_recall": 0.9963931469792606,
+    "correction_f1": 0.8936514355034372
+  },
+  "best_detection": {
+    "threshold": 0.5,
+    "detection_precision": 0.9237536656891495,
+    "detection_recall": 0.9968354430379747,
+    "detection_f1": 0.9589041095890409,
+    "correction_precision": 0.8101173020527859,
+    "correction_recall": 0.9963931469792606,
+    "correction_f1": 0.8936514355034372
+  },
+  "per_noise_type": {
+    "emptied": {
+      "n_records": 211,
+      "recall@1": 0.7867298578199052,
+      "mrr": 0.8360831826399112
+    },
+    "whitespace": {
+      "n_records": 3,
+      "recall@1": 0.6666666666666666,
+      "mrr": 0.6888888888888888
+    },
+    "case": {
+      "n_records": 90,
+      "recall@1": 0.8222222222222222,
+      "mrr": 0.8646573893942314
+    },
+    "punctuation": {
+      "n_records": 2,
+      "recall@1": 0.5,
+      "mrr": 0.5081967213114754
+    },
+    "code_substitution": {
+      "n_records": 49,
+      "recall@1": 0.8367346938775511,
+      "mrr": 0.8842970521541952
+    },
+    "abbreviation": {
+      "n_records": 21,
+      "recall@1": 0.8571428571428571,
+      "mrr": 0.8882275132275133
+    },
+    "token_drop": {
+      "n_records": 77,
+      "recall@1": 0.6363636363636364,
+      "mrr": 0.7223339112579884
+    },
+    "value_error": {
+      "n_records": 84,
+      "recall@1": 0.7023809523809523,
+      "mrr": 0.7636341625603931
+    }
+  },
+  "per_corruption_count": {
+    "1": {
+      "n_records": 2,
+      "recall@1": 1.0,
+      "mrr": 1.0
+    },
+    "2": {
+      "n_records": 15,
+      "recall@1": 0.8666666666666667,
+      "mrr": 0.9111111111111111
+    },
+    "3-4": {
+      "n_records": 52,
+      "recall@1": 0.6538461538461539,
+      "mrr": 0.7182406300419064
+    },
+    "5+": {
+      "n_records": 180,
+      "recall@1": 0.8222222222222222,
+      "mrr": 0.8703458944281355
+    }
+  }
+}

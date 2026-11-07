@@ -1,0 +1,122 @@
+{
+  "split": "test",
+  "step": 0,
+  "n_queries": 249,
+  "n_canonical": 1656,
+  "query_instruction": "noise_specific",
+  "doc_instruction": "none",
+  "retrieval": {
+    "recall@1": 0.570281124497992,
+    "recall@5": 0.8353413654618473,
+    "recall@10": 0.9036144578313253,
+    "mrr": 0.6895252467390305,
+    "median_rank": 1.0,
+    "mean_rank": 6.7028112449799195
+  },
+  "diagnostics": {
+    "positive_similarity": 0.6770995855331421,
+    "positive_similarity_std": 0.07774749398231506,
+    "hardest_negative_similarity": 0.69198077917099,
+    "separation_margin": -0.0148811936378479
+  },
+  "cell_no_abstention": {
+    "detection": {
+      "precision": 0.8539402173913043,
+      "recall": 0.9944620253164557,
+      "f1": 0.9188596491228069,
+      "tp": 1257,
+      "fp": 215,
+      "fn": 7
+    },
+    "correction": {
+      "precision": 0.6379076086956522,
+      "recall": 0.992600422832981,
+      "f1": 0.7766749379652605,
+      "tp": 939,
+      "fp": 533,
+      "fn": 7
+    }
+  },
+  "best_correction": {
+    "threshold": 0.5,
+    "detection_precision": 0.8534423994546694,
+    "detection_recall": 0.990506329113924,
+    "detection_f1": 0.9168802636396924,
+    "correction_precision": 0.6366734832992502,
+    "correction_recall": 0.9873150105708245,
+    "correction_f1": 0.7741400745959387
+  },
+  "best_detection": {
+    "threshold": 0.5,
+    "detection_precision": 0.8534423994546694,
+    "detection_recall": 0.990506329113924,
+    "detection_f1": 0.9168802636396924,
+    "correction_precision": 0.6366734832992502,
+    "correction_recall": 0.9873150105708245,
+    "correction_f1": 0.7741400745959387
+  },
+  "per_noise_type": {
+    "emptied": {
+      "n_records": 211,
+      "recall@1": 0.5450236966824644,
+      "mrr": 0.6690541180883935
+    },
+    "whitespace": {
+      "n_records": 3,
+      "recall@1": 1.0,
+      "mrr": 1.0
+    },
+    "case": {
+      "n_records": 90,
+      "recall@1": 0.7111111111111111,
+      "mrr": 0.8054099896205159
+    },
+    "punctuation": {
+      "n_records": 2,
+      "recall@1": 0.5,
+      "mrr": 0.5142857142857142
+    },
+    "code_substitution": {
+      "n_records": 49,
+      "recall@1": 0.7551020408163265,
+      "mrr": 0.8337694051979766
+    },
+    "abbreviation": {
+      "n_records": 21,
+      "recall@1": 0.6666666666666666,
+      "mrr": 0.7814407814407813
+    },
+    "token_drop": {
+      "n_records": 77,
+      "recall@1": 0.42857142857142855,
+      "mrr": 0.5804039390277224
+    },
+    "value_error": {
+      "n_records": 84,
+      "recall@1": 0.47619047619047616,
+      "mrr": 0.6095225784769502
+    }
+  },
+  "per_corruption_count": {
+    "1": {
+      "n_records": 2,
+      "recall@1": 0.5,
+      "mrr": 0.75
+    },
+    "2": {
+      "n_records": 15,
+      "recall@1": 1.0,
+      "mrr": 1.0
+    },
+    "3-4": {
+      "n_records": 52,
+      "recall@1": 0.5384615384615384,
+      "mrr": 0.6474044697414391
+    },
+    "5+": {
+      "n_records": 180,
+      "recall@1": 0.5444444444444444,
+      "mrr": 0.6751486333970209
+    }
+  }
+}

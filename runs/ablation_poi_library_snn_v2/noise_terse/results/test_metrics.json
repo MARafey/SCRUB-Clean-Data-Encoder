@@ -1,0 +1,122 @@
+{
+  "split": "test",
+  "step": 0,
+  "n_queries": 249,
+  "n_canonical": 1656,
+  "query_instruction": "noise_terse",
+  "doc_instruction": "none",
+  "retrieval": {
+    "recall@1": 0.642570281124498,
+    "recall@5": 0.8273092369477911,
+    "recall@10": 0.9036144578313253,
+    "mrr": 0.7244365639852176,
+    "median_rank": 1.0,
+    "mean_rank": 6.506024096385542
+  },
+  "diagnostics": {
+    "positive_similarity": 0.6684972047805786,
+    "positive_similarity_std": 0.08527174592018127,
+    "hardest_negative_similarity": 0.6808929443359375,
+    "separation_margin": -0.012395739555358887
+  },
+  "cell_no_abstention": {
+    "detection": {
+      "precision": 0.8857545839210155,
+      "recall": 0.9936708860759493,
+      "f1": 0.936614466815809,
+      "tp": 1256,
+      "fp": 162,
+      "fn": 8
+    },
+    "correction": {
+      "precision": 0.7009873060648801,
+      "recall": 0.9920159680638723,
+      "f1": 0.8214876033057852,
+      "tp": 994,
+      "fp": 424,
+      "fn": 8
+    }
+  },
+  "best_correction": {
+    "threshold": 0.5,
+    "detection_precision": 0.88731396172927,
+    "detection_recall": 0.990506329113924,
+    "detection_f1": 0.9360747663551401,
+    "correction_precision": 0.703756201275691,
+    "correction_recall": 0.9880597014925373,
+    "correction_f1": 0.8220198675496689
+  },
+  "best_detection": {
+    "threshold": 0.5,
+    "detection_precision": 0.88731396172927,
+    "detection_recall": 0.990506329113924,
+    "detection_f1": 0.9360747663551401,
+    "correction_precision": 0.703756201275691,
+    "correction_recall": 0.9880597014925373,
+    "correction_f1": 0.8220198675496689
+  },
+  "per_noise_type": {
+    "emptied": {
+      "n_records": 211,
+      "recall@1": 0.6066350710900474,
+      "mrr": 0.6994140810378477
+    },
+    "whitespace": {
+      "n_records": 3,
+      "recall@1": 0.6666666666666666,
+      "mrr": 0.8333333333333334
+    },
+    "case": {
+      "n_records": 90,
+      "recall@1": 0.7444444444444445,
+      "mrr": 0.8196164021164022
+    },
+    "punctuation": {
+      "n_records": 2,
+      "recall@1": 1.0,
+      "mrr": 1.0
+    },
+    "code_substitution": {
+      "n_records": 49,
+      "recall@1": 0.8367346938775511,
+      "mrr": 0.8702380952380953
+    },
+    "abbreviation": {
+      "n_records": 21,
+      "recall@1": 0.7142857142857143,
+      "mrr": 0.7984126984126986
+    },
+    "token_drop": {
+      "n_records": 77,
+      "recall@1": 0.5584415584415584,
+      "mrr": 0.6429812883462568
+    },
+    "value_error": {
+      "n_records": 84,
+      "recall@1": 0.5476190476190477,
+      "mrr": 0.6500547843346913
+    }
+  },
+  "per_corruption_count": {
+    "1": {
+      "n_records": 2,
+      "recall@1": 1.0,
+      "mrr": 1.0
+    },
+    "2": {
+      "n_records": 15,
+      "recall@1": 0.9333333333333333,
+      "mrr": 0.9466666666666667
+    },
+    "3-4": {
+      "n_records": 52,
+      "recall@1": 0.6923076923076923,
+      "mrr": 0.7248709755420067
+    },
+    "5+": {
+      "n_records": 180,
+      "recall@1": 0.6,
+      "mrr": 0.7027300761340826
+    }
+  }
+}

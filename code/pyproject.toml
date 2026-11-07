@@ -1,0 +1,62 @@
+[project]
+name = "clean-data-encoder"
+version = "0.2.0"
+description = "From-scratch noise-instruction-conditioned embeddings for matching corrupted address records against a clean canonical database"
+readme = "README.md"
+
+# TensorFlow 2.16-2.21 publishes wheels for CPython 3.9-3.12. 3.13 is excluded
+# because tensorflow-cpu has no wheel for it in this range.
+requires-python = ">=3.10,<3.13"
+
+dependencies = [
+    # Plain TensorFlow/Keras. There is no pretrained backbone to load, so
+    # none of the transformers / tf-keras / TF_USE_LEGACY_KERAS / torch /
+    # sentencepiece chain that a HuggingFace TF encoder needs applies here -
+    # the encoder and tokenizer in model.py / tokenizer.py are plain
+    # tf.keras.layers, built and trained only on this project's own data.
+    "tensorflow>=2.16,<2.22",
+    "tensorboard>=2.16",
+
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "scikit-learn>=1.3",   # only for baseline_lexical.py and t-SNE in visualize.py
+    "matplotlib>=3.7",
+]
+
+[project.optional-dependencies]
+# NVIDIA GPU support: pulls the CUDA/cuDNN wheels TensorFlow needs.
+#     uv sync --extra gpu
+#
+# LINUX AND WSL2 ONLY. TensorFlow dropped native Windows GPU support after
+# 2.10, so tensorflow >= 2.11 on native Windows is CPU-only regardless of what
+# is installed. From Windows, run this project inside WSL2 to use a GPU.
+# Verify with `nvidia-smi` first, then run with require_gpu=true so a silent
+# CPU fallback fails loudly instead of just running 40x slower.
+gpu = ["tensorflow[and-cuda]>=2.16,<2.22"]
+
+# Pretrained-backbone side experiment (model_pretrained.py, encoder_type=pretrained):
+#     uv sync --extra pretrained
+# Pinned to the last transformers/tf-keras combination known to run TF model
+# classes cleanly against Keras 3 (TF_USE_LEGACY_KERAS=1 shim) - the exact
+# transformers/tf-keras/TF_USE_LEGACY_KERAS chain the base dependencies
+# above are deliberately built to avoid needing for SCRUB itself.
+pretrained = ["transformers==4.40.0", "tf-keras"]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.6",
+    "ipython>=8.0",
+]
+
+[tool.uv]
+# Flat scripts, not an installable package: this stops uv trying to build a
+# wheel for the project itself and keeps `uv run` fast.
+package = false
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["E501"]

@@ -1,0 +1,56 @@
+# ---- Dataset (16 GB; download separately, see README) ----
+AddressTable/
+
+# ---- Run artifacts (checkpoints, TensorBoard logs, embeddings) ----
+# Small result files (metrics json/csv/txt) are kept; heavy binaries are not.
+runs/**/checkpoints/
+runs/**/checkpoints_best/
+runs/**/events.out.tfevents.*
+runs/**/*.npz
+runs/**/*.ckpt*
+runs/**/*.index
+runs/**/*.data-*
+runs/**/*.png
+runs/**/projector/
+smoke_*/
+
+# ---- Copyrighted reference PDFs (keep Papers/README.md + gap analysis) ----
+Papers/*.pdf
+
+# ---- Python / env ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ---- Stray empty files created by accidental shell redirects in code/ ----
+code/1
+code/dict
+code/dirty
+code/Dict[[]str
+code/list[[]int]
+code/[[]UNK],
+
+# ---- Local / tooling / non-code deliverables ----
+.claude/
+.claude-flow/
+.swarm/
+Claude outputs/
+Assignment/
+SCRUB Paper/
+Research_Gap_Brief.docx
+
+# ---- Secrets ----
+.env
+.env.*
+*.pem
+*.key
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log

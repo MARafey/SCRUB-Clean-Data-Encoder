@@ -1,0 +1,53 @@
+[
+  {
+    "variant": "none",
+    "instruction": "none: <no instruction>",
+    "trained": true,
+    "recall@1": 0.7429718875502008,
+    "recall@5": 0.891566265060241,
+    "recall@10": 0.9156626506024096,
+    "mrr": 0.8080546948596095,
+    "median_rank": 1.0,
+    "correction_f1": 0.8600654664484451,
+    "correction_precision": 0.7610427226647357,
+    "correction_recall": 0.9887111947318908,
+    "correction_threshold": 0.56,
+    "detection_f1": 0.9485155956407366,
+    "positive_similarity": 0.8194053769111633,
+    "separation_margin": 0.005318582057952881
+  },
+  {
+    "variant": "noise_terse",
+    "instruction": "noise_terse: Ignore spacing, casing, abbreviation and punctuation noise. Represent the underlying address:",
+    "trained": true,
+    "recall@1": 0.7188755020080321,
+    "recall@5": 0.8995983935742972,
+    "recall@10": 0.9397590361445783,
+    "mrr": 0.8034002706455274,
+    "median_rank": 1.0,
+    "correction_f1": 0.8706754530477759,
+    "correction_precision": 0.7772058823529412,
+    "correction_recall": 0.9897003745318352,
+    "correction_threshold": 0.56,
+    "detection_f1": 0.9553030303030303,
+    "positive_similarity": 0.7847557663917542,
+    "separation_margin": -0.0002358555793762207
+  },
+  {
+    "variant": "noise_specific",
+    "instruction": "noise_specific: Represent this corrupted address record for retrieving its clean canonical version. The record may contain ...",
+    "trained": true,
+    "recall@1": 0.642570281124498,
+    "recall@5": 0.7991967871485943,
+    "recall@10": 0.8554216867469879,
+    "mrr": 0.7190561175522189,
+    "median_rank": 1.0,
+    "correction_f1": 0.8074584515605999,
+    "correction_precision": 0.6789366053169734,
+    "correction_recall": 0.996,
+    "correction_threshold": 0.5,
+    "detection_f1": 0.9227389234712561,
+    "positive_similarity": 0.8091311454772949,
+    "separation_margin": -0.014879286289215088
+  }
+]

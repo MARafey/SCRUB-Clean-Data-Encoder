@@ -1,0 +1,193 @@
+==============================================================================
+FAILURES (worst ranks first)
+==============================================================================
+
+rank=392  top1_sim=0.5970
+  dirty     : name: Rémalard en Perche | postcode: 61110 | locality: Rémalard en Perche | region: Normandie | country: France
+  gold clean: name: Centre territorial de santé de Rémalard en Perche | house_number: ZA | road: Z.A. Saint-Marc | postcode: 61110 | locality: Rémalard en Perche | region: Normandie | country: France | country_code: fr
+  retrieved : name: Moussey | house_number: 107 | road: Rue René Laederich | postcode: 88210 | locality: Moussey | region: Grand Est | country: France | country_code: fr
+
+rank=334  top1_sim=0.6934
+  dirty     : name: Biblioteca di Tirolo | house_number: 13/A | road: Via Principale | locality: Tirolo •
+  gold clean: name: Öffentliche Bibliothek Tirol - Biblioteca di Tirolo | house_number: 13a | road: Hauptstraße - Via Principale | postcode: 39019 | locality: Tirol - Tirolo | region: Trentino-Alto Adige/Südtirol | country: Italia | country_code: it
+  retrieved : name: Biblioteca di Scienze giuridiche - Centro Studi Giuridici Italo-Cinese | house_number: 5 | road: Piazzale Aldo Moro | postcode: 00185 | locality: Roma | region: Lazio | country: Italia | country_code: it
+
+rank=292  top1_sim=0.7917
+  dirty     : name: Mellionnec | postcode: 22110 | locality: Mellionnec | region: Bretagne | country: France
+  gold clean: name: Bibliothèque de Mellionnec | house_number: 1 | road: Place de la Mairie | postcode: 22110 | locality: Mellionnec | region: Bretagne | country: France | country_code: fr
+  retrieved : name: Stadt- und Schulbücherei Haiterbach | house_number: 37-43 | road: Hohenrainstraße | postcode: 72221 | locality: Haiterbach | region: Baden-Württemberg | country: Deutschland | country_code: de
+
+rank=144  top1_sim=0.8907
+  dirty     : name: École primaire | postcode: 76840 | locality: Quevillon
+  gold clean: name: École primaire Boréale | house_number: 221 | road: Place Quévillon | postcode: J0Y 1X0 | locality: Lebel-sur-Quévillon | region: Québec | country: Canada | country_code: ca
+  retrieved : name: École primaire | house_number: 27 | road: Route de Bourbourg | postcode: 59143 | locality: Holque | region: France métropolitaine | country: France | country_code: fr
+
+rank=102  top1_sim=0.6574
+  dirty     : name: Ecole primaire Jeanne d'Arc | postcode: 62300 | locality: Lens
+  gold clean: name: École primaire privée Saint-Louis - Sainte-Jeanne d'Arc | house_number: 119 | road: Avenue du Maréchal Leclerc | postcode: 62110 | locality: Hénin-Beaumont | region: France métropolitaine | country: France | country_code: fr
+  retrieved : name: École primaire Voltaire | house_number: 9 | road: Rue Jules Guesde | postcode: 62420 | locality: Lens | region: France métropolitaine | country: France | country_code: fr
+
+rank=88  top1_sim=0.8289
+  dirty     : name: Saint-Moreil | postcode: 23400 | locality: Saint-Moreil | region: Nouvelle-Aquitaine | country: France
+  gold clean: name: Agence postale communale de Saint-Moreil | house_number: 1BIS | road: Place de l'Église | postcode: 23400 | locality: Saint-Moreil | region: Nouvelle-Aquitaine | country: France | country_code: fr
+  retrieved : name: Saint-Brandan | house_number: 6 | road: Place de l'Église | postcode: 22800 | locality: Saint-Brandan | region: Bretagne | country: France | country_code: fr
+
+rank=79  top1_sim=0.8586
+  dirty     : name: Étouvans | postcode: 25260 | locality: Étouvans | region: Bourgogne-Franche-Comté | country: France
+  gold clean: name: Mairie d'Étouvans | house_number: 23 | road: Rue de l'Église | postcode: 25260 | locality: Étouvans | region: Bourgogne-Franche-Comté | country: France | country_code: fr
+  retrieved : name: Thise | house_number: 4B | road: Rue de Besançon | postcode: 25220 | locality: Thise | region: Bourgogne-Franche-Comté | country: France | country_code: fr
+
+rank=74  top1_sim=0.7434
+  dirty     : name: Panevežio Geležinkelio stotis | house_number: 9 | road: S. Kerbedžio G. | locality: Panevėžys
+  gold clean: name: Panevėžio geležinkelio stotis | house_number: 9 | road: S. Kerbedžio g. | postcode: 35105 | locality: Panevėžys | region: Panevėžio apskritis | country: Lietuva | country_code: lt
+  retrieved : name: Maud Smith Marks Branch Library | house_number: 1815 | road: Westgreen Boulevard | postcode: 77450 | locality: Katy | region: Texas | country: United States | country_code: us
+
+rank=37  top1_sim=0.5557
+  dirty     : name: Diane-de-Poitiers | house_number: 4 | road: Rue Sainte Croix | postcode: 91150 | locality: Étampes | country: FR | country_code: fr
+  gold clean: name: Bibliothèque Intercommunale Diane-de-Poitiers | house_number: 4 | road: Rue Sainte-Croix | postcode: 91150 | locality: Étampes | region: France métropolitaine | country: France | country_code: fr
+  retrieved : name: Camping GCU de Saint-Bonnet-le-Bourg | house_number: 395 | road: Route de Marchaud | postcode: 63630 | locality: Saint-Bonnet-le-Bourg | region: Auvergne-Rhône-Alpes | country: France | country_code: fr
+
+rank=36  top1_sim=0.6862
+  dirty     : name: Orignolles | postcode: 17210 | locality: Orignolles | region: Nouvelle-Aquitaine | country: France
+  gold clean: name: Mairie d'Orignolles | house_number: 3 | road: Rue Pierre Furet | postcode: 17210 | locality: Orignolles | region: Nouvelle-Aquitaine | country: France | country_code: fr
+  retrieved : name: Stadt- und Schulbücherei Haiterbach | house_number: 37-43 | road: Hohenrainstraße | postcode: 72221 | locality: Haiterbach | region: Baden-Württemberg | country: Deutschland | country_code: de
+
+rank=25  top1_sim=0.6011
+  dirty     : name: Juozo Balčikonio gimnazija | house_number: 47 | road: Respublikos G. | locality: Panevėžys
+  gold clean: name: Panevėžio Juozo Balčikonio gimnazija | house_number: 47 | road: Respublikos g. | postcode: 35170 | locality: Panevėžys | region: Panevėžio apskritis | country: Lietuva | country_code: lt
+  retrieved : name: Kauno Juozo Gruodžio konservatorija | house_number: 6 | road: J. Gruodžio g. | postcode: 44293 | locality: Kaunas | region: Kauno apskritis | country: Lietuva | country_code: lt
+
+rank=24  top1_sim=0.7824
+  dirty     : name: Grigiškių meno mokyklą | house_number: 10 | road: Pašto G. | locality: Vilnius
+  gold clean: name: Grigiškių meno mokykla | house_number: 10 | road: Pašto g. | postcode: 27105 | locality: Grigiškės | region: Vilniaus apskritis | country: Lietuva | country_code: lt
+  retrieved : name: Pilininko namas | house_number: 1 | road: Arsenalo g. | postcode: 01143 | locality: Vilnius | region: Vilniaus apskritis | country: Lietuva | country_code: lt
+
+rank=21  top1_sim=0.7622
+  dirty     : name: Centrinis knygynas | house_number: 13 | road: Gedimino Pr. | locality: Vilnius
+  gold clean: name: Vilniaus centrinis knygynas | house_number: 13 | road: Gedimino pr. | postcode: 01103 | locality: Vilnius | region: Vilniaus apskritis | country: Lietuva | country_code: lt
+  retrieved : name: Peronas | house_number: 6 | road: Geležinkelio g. | postcode: 01047 | locality: Vilnius | region: Vilniaus apskritis | country: Lietuva | country_code: lt
+
+rank=21  top1_sim=0.7774
+  dirty     : name: Woodside | house_number: 3140 | road: Woodside Road | postcode: 94062 | locality: Woodside | region: CA | country: US | country_code: us
+  gold clean: name: Woodside Branch San Mateo County Library | house_number: 3140 | road: Woodside Road | postcode: 94062 | locality: Woodside | region: California | country: United States | country_code: us
+  retrieved : name: Los Altos Library | house_number: 13 | road: South San Antonio Road | postcode: 94022 | locality: Los Altos | region: California | country: United States | country_code: us
+
+rank=19  top1_sim=0.7838
+  dirty     : name: Mottingham Library | house_number: 31 | road: Mottingham Road | postcode: SE9 4QZ | locality: Mottingham | region: Greater London
+  gold clean: name: Mottingham Library | house_number: 31 | road: Mottingham Road | postcode: SE9 4QZ | locality: Greater London | region: England | country: United Kingdom | country_code: gb
+  retrieved : name: Ridgefield Library | house_number: 472 | road: Main Street | postcode: 06877 | locality: Ridgefield | region: Connecticut | country: United States | country_code: us
+
+rank=16  top1_sim=0.8199
+  dirty     : name: IMP CHATEAU D'ETENNEMARE | postcode: 76570 | locality: Limésy
+  gold clean: name: IMP Chateau d'Etennemare | house_number: 1144 | road: Rue du Château | postcode: 76570 | locality: Limésy | region: France métropolitaine | country: France | country_code: fr
+  retrieved : name: GHD maçonnerie générale Plouay | house_number: 8 | road: Rue de la Chaumière | postcode: 56240 | locality: Plouay | region: France métropolitaine | country: France | country_code: fr
+
+rank=16  top1_sim=0.6141
+  dirty     : name: ACCUEIL DE JOUR LES PEPINIERES | postcode: 59220 | locality: Denain
+  gold clean: name: Accueil de jour Les pépinières | house_number: 771 | road: Route d'Oisy | postcode: 59220 | locality: Denain | region: France métropolitaine | country: France | country_code: fr
+  retrieved : name: Hôtel Campanile Rouen-Sud Cléon Elbeuf | house_number: 195 | road: Rue Alain Colas | postcode: 76410 | locality: Cléon | region: France métropolitaine | country: France | country_code: fr
+
+rank=16  top1_sim=0.8093
+  dirty     : name: Evergreen | house_number: 2635 | road: Aborn Rd | postcode: 95121 | locality: San Jose | region: CA | country: US | country_code: us
+  gold clean: name: Evergreen Branch Library | house_number: 2635 | road: Aborn Road | postcode: 95121 | locality: San Jose | region: California | country: United States | country_code: us
+  retrieved : name: Santa Teresa Branch Library | house_number: 290 | road: International Circle | postcode: 95119 | locality: San Jose | region: California | country: United States | country_code: us
+
+rank=15  top1_sim=0.8939
+  dirty     : name: Bibliothèque municipale | postcode: 38650 | locality: Saint-Guillaume
+  gold clean: name: Bibliothèque Municipale | house_number: 1 | road: Place du Champ de Foire | postcode: 71220 | locality: La Tannerie | region: France métropolitaine | country: France | country_code: fr
+  retrieved : name: Bibliothèque municipale du 1er Arrondissement | house_number: 7 | road: Rue Saint-Polycarpe | postcode: 69001 | locality: Lyon | region: France métropolitaine | country: France | country_code: fr
+
+rank=13  top1_sim=0.7168
+  dirty     : name: Merville-Franceville-Plage | postcode: 14810 | locality: Merville-Franceville-Plage | region: Normandie | country: France
+  gold clean: name: Boulangerie de la plage - Aux délices de Merville Franceville | house_number: 14 | road: Avenue de Paris | postcode: 14810 | locality: Merville-Franceville-Plage | region: Normandie | country: France | country_code: fr
+  retrieved : name: Ruffey-sur-Seille | house_number: 132 | road: Rue du Général Lecourbe | postcode: 39140 | locality: Ruffey-sur-Seille | region: France métropolitaine | country: France | country_code: fr
+
+rank=13  top1_sim=0.6991
+  dirty     : name: Winchester Branch | house_number: 547 | road: St. Lawrence Street | postcode: K0C 2K0 | locality: Winchester | region: Ontario | country: CA | country_code: ca
+  gold clean: name: SDG Library - Winchester Branch | house_number: 547 | road: St. Lawrence Street | postcode: K0C 2K0 | locality: Winchester | region: Ontario | country: Canada | country_code: ca
+  retrieved : name: Rudy Lozano Branch Library | house_number: 1805 | road: South Loomis Street | postcode: 60608 | locality: Chicago | region: Illinois | country: United States | country_code: us
+
+rank=9  top1_sim=0.7722
+  dirty     : name: École primaire Saint-Jean-Baptiste de La Salle | postcode: 59300 | locality: Valenciennes
+  gold clean: name: École primaire privée Saint-Jean-Baptiste de La Salle | house_number: 8 | road: Impasse des Cardinaux | postcode: 59300 | locality: Valenciennes | region: France métropolitaine | country: France | country_code: fr
+  retrieved : name: École primaire Alphonse de Lamartine | house_number: 2 | road: Rue de la Poissonnerie | postcode: 62500 | locality: Saint-Omer | region: France métropolitaine | country: France | country_code: fr
+
+rank=9  top1_sim=0.8281
+  dirty     : name: Ecole maternelle Cuvinot | postcode: 59264 | locality: Onnaing
+  gold clean: name: École maternelle Hameau de Cuvinot | house_number: 1 | road: Chasse de Valenciennes | postcode: 59264 | locality: Onnaing | region: France métropolitaine | country: France | country_code: fr
+  retrieved : name: École maternelle | house_number: 90 | road: Rue Jean Jaurès | postcode: 59233 | locality: Valenciennes | region: France métropolitaine | country: France | country_code: fr
+
+rank=9  top1_sim=0.6142
+  dirty     : name: Downtown Library | house_number: 270 | road: Forest Ave. | postcode: 94301 | locality: Palo Alto | region: CA | country: US | country_code: us
+  gold clean: name: Palo Alto Downtown Library | house_number: 270 | road: Forest Avenue | postcode: 94301 | locality: Palo Alto | region: California | country: United States | country_code: us
+  retrieved : name: Kenton County Public Library Administration Center | house_number: 3095 | road: Hulbert Avenue | postcode: 41018 | locality: Erlanger | region: Kentucky | country: United States | country_code: us
+
+rank=8  top1_sim=0.7603
+  dirty     : name: Ferques | postcode: 62250 | locality: Ferques | region: Hauts-de-France | country: France
+  gold clean: name: Mairie de Ferques | house_number: 31 | road: Rue Élisée Clais | postcode: 62250 | locality: Élinghen | region: Hauts-de-France | country: France | country_code: fr
+  retrieved : name: Mairie de Gézaincourt | house_number: 20 | road: Rue Neuve | postcode: 80600 | locality: Gézaincourt | region: Hauts-de-France | country: France | country_code: fr
+
+==============================================================================
+SUCCESSES
+==============================================================================
+
+top1_sim=0.8939
+  dirty     : name: Kauno Valdorfo mokykla | house_number: 11 | road: Šiaurės Pr. | locality: Kaunas
+  retrieved : name: Kauno Valdorfo mokykla | house_number: 11 | road: Šiaurės pr. | postcode: 49190 | locality: Kaunas | region: Kauno apskritis | country: Lietuva | country_code: lt
+
+top1_sim=0.8659
+  dirty     : name: Creston Valley Public Library | house_number: 531 | road: 16Th Ave. S | postcode: V0B 1G0 | locality: Creston | region: BC | country: Canada
+  retrieved : name: Creston Valley Public Library | house_number: 531 | road: 16th Avenue South | postcode: V0B 1G0 | locality: Creston | region: British Columbia | country: Canada | country_code: ca
+
+top1_sim=0.8688
+  dirty     : name: Druskininkų savivaldybės viešoji biblioteka | house_number: 13 | road: V. Kudirkos G. | locality: Druskininkai
+  retrieved : name: Druskininkų savivaldybės viešoji biblioteka | house_number: 13 | road: V. Kudirkos g. | postcode: 66120 | locality: Druskininkai | region: Alytaus apskritis | country: Lietuva | country_code: lt
+
+top1_sim=0.7400
+  dirty     : name: Klaipėdos Hermano Zudermano gimnazija | house_number: 29 | road: Debreceno G. | locality: Klaipėda
+  retrieved : name: Klaipėdos Hermano Zudermano gimnazija | house_number: 29 | road: Debreceno g. | postcode: 94167 | locality: Klaipėda | region: Klaipėdos apskritis | country: Lietuva | country_code: lt
+
+top1_sim=0.8239
+  dirty     : name: Nagyvárad Gyógyszertár | house_number: 121 | road: Üllői Út
+  retrieved : name: Nagyvárad Gyógyszertár | house_number: 121 | road: Üllői út | postcode: 1091 | locality: Budapest | region: Közép-Magyarország | country: Magyarország | country_code: hu
+
+top1_sim=0.7590
+  dirty     : name: Downtown Branch | house_number: 1401 | road: Jones St. | postcode: 68102 | locality: Omaha | region: NE | country: US | country_code: us
+  retrieved : name: Downtown Branch | house_number: 1401 | road: Jones Street | postcode: 68102 | locality: Omaha | region: Nebraska | country: United States | country_code: us
+
+top1_sim=0.8387
+  dirty     : name: Vanderhoof Public Library | house_number: 230 | road: Stewart Street East | postcode: V0J 3A0 | locality: Vanderhoof | region: BC | country: Canada
+  retrieved : name: Vanderhoof Public Library | house_number: 230 | road: East Stewart Street | postcode: V0J 3A0 | locality: Vanderhoof | region: British Columbia | country: Canada | country_code: ca
+
+top1_sim=0.8520
+  dirty     : name: TENNIS CLUB DES CORBIERES | postcode: 11200 | locality: Fabrezan
+  retrieved : name: Tennis Club des Corbières | house_number: 20 | road: Chemin de Canet | postcode: 11200 | locality: Fabrezan | region: France métropolitaine | country: France | country_code: fr
+
+top1_sim=0.7749
+  dirty     : name: Maison de Santé | postcode: 73240 | locality: Saint-Genix-les-Villages
+  retrieved : name: Maison de Santé du Guiers | house_number: 77 | road: Rue du Collège | postcode: 73240 | locality: Saint-Genix-les-Villages | region: France métropolitaine | country: France | country_code: fr
+
+top1_sim=0.8623
+  dirty     : name: Ecole maternelle Alfred Maës | postcode: 62300 | locality: Lens
+  retrieved : name: École maternelle Alfred Maës | house_number: 301 | road: Avenue Alfred Maës | postcode: 62300 | locality: Lens | region: France métropolitaine | country: France | country_code: fr
+
+top1_sim=0.6817
+  dirty     : name: Lone Star Ice House | house_number: 1016 | road: Mccann Road | locality: Longview | region: TX
+  retrieved : name: Lone Star Ice House | house_number: 1016 | road: McCann Road | postcode: 75601 | locality: Longview | region: Texas | country: United States | country_code: us
+
+top1_sim=0.8769
+  dirty     : name: Grigiškių kultūros centras | house_number: 12 | road: Vilniaus G. | locality: Vilnius
+  retrieved : name: Grigiškių kultūros centras | house_number: 12 | road: Vilniaus g. | postcode: 27101 | locality: Grigiškės | region: Vilniaus apskritis | country: Lietuva | country_code: lt
+
+top1_sim=0.8282
+  dirty     : name: Pharmacie DE LA MARINE | postcode: 76400 | locality: Fécamp
+  retrieved : name: Pharmacie de la Marine | house_number: 65 | road: Quai Bérigny | postcode: 76400 | locality: Fécamp | region: France métropolitaine | country: France | country_code: fr
+
+top1_sim=0.7311
+  dirty     : name: Orinda | house_number: 26 | road: Orinda Way | postcode: 94563 | locality: Orinda | region: CA | country: US | country_code: us
+  retrieved : name: Orinda Library | house_number: 26 | road: Orinda Way | postcode: 94563 | locality: Orinda | region: California | country: United States | country_code: us
+
+top1_sim=0.8431
+  dirty     : name: VILLAGE DE L'AMITIE | postcode: 38360 | locality: Noyarey
+  retrieved : name: Village de l'Amitié | house_number: 525 | road: Chemin du Moulin | postcode: 38360 | locality: Noyarey | region: France métropolitaine | country: France | country_code: fr
+
