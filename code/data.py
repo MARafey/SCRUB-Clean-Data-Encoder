@@ -179,6 +179,39 @@ class Split:
         return len(self.indices)
 
 
+def _grouped_split(canonical_texts: Sequence[str],
+                   rng: np.random.Generator,
+                   train_frac: float,
+                   val_frac: float) -> Dict[str, np.ndarray]:
+    """Split rows so every group of identical canonical text lands in ONE
+    partition (no address is both a training pair and a test target).
+
+    Groups are shuffled by the seeded rng, then each is placed in the
+    partition currently furthest below its row-count target that still has
+    room, so the partition sizes track train_frac / val_frac / remainder
+    (exactly, up to the size of the largest group). The canonical index used at
+    retrieval time is unaffected: it still spans every clean row.
+    """
+    groups: Dict[str, List[int]] = {}
+    for i, t in enumerate(canonical_texts):
+        groups.setdefault(t, []).append(i)
+    keys = list(groups)
+    perm = rng.permutation(len(keys))
+    n = len(canonical_texts)
+    target = {"train": train_frac * n,
+              "val": val_frac * n,
+              "test": (1.0 - train_frac - val_frac) * n}
+    filled = {k: 0 for k in target}
+    members: Dict[str, List[int]] = {k: [] for k in target}
+    for gi in perm:
+        rows = groups[keys[gi]]
+        # furthest below target, relative; fall back to any partition if full
+        name = max(target, key=lambda k: (target[k] - filled[k]) / target[k])
+        members[name].extend(rows)
+        filled[name] += len(rows)
+    return {k: np.asarray(v, dtype=np.int64) for k, v in members.items()}
+
+
 def _derangement(n: int, rng: np.random.Generator) -> np.ndarray:
     """A random permutation of range(n) with no fixed points (perm[i] != i).
 
@@ -287,14 +320,22 @@ def load_dataset(cfg: ExperimentConfig, verbose: bool = True) -> AddressData:
 
     # Deterministic split over row indices.
     rng = np.random.default_rng(cfg.seed)
-    order = rng.permutation(len(clean_df))
-    n_train = int(cfg.train_frac * len(order))
-    n_val = int(cfg.val_frac * len(order))
-    bounds = {
-        "train": order[:n_train],
-        "val": order[n_train:n_train + n_val],
-        "test": order[n_train + n_val:],
-    }
+    n_rows = len(clean_df)
+    if cfg.split_mode == "random":
+        order = rng.permutation(n_rows)
+        n_train = int(cfg.train_frac * len(order))
+        n_val = int(cfg.val_frac * len(order))
+        bounds = {
+            "train": order[:n_train],
+            "val": order[n_train:n_train + n_val],
+            "test": order[n_train + n_val:],
+        }
+    elif cfg.split_mode == "grouped":
+        bounds = _grouped_split(canonical_texts, rng,
+                                cfg.train_frac, cfg.val_frac)
+    else:
+        raise ValueError(f"Unknown split_mode '{cfg.split_mode}' "
+                         f"(expected 'random' or 'grouped')")
     splits = {
         name: Split(
             name=name,

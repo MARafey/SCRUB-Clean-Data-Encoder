@@ -316,13 +316,13 @@ def mcnemar_test(correct_a: np.ndarray, correct_b: np.ndarray) -> Dict[str, floa
             from scipy import stats as _stats
             p_value = float(1 - _stats.chi2.cdf(chi2, df=1))
         except ImportError:
-            # No scipy available: fall back to a normal approximation of the
-            # same statistic (McNemar's chi2 with 1 df is z^2 for
-            # z = (only_a - only_b) / sqrt(n_discordant)), using the error
-            # function from the standard library only.
+            # No scipy available: chi-square with 1 df is z^2, so
+            # p = erfc(sqrt(chi2 / 2)). Use the SAME continuity-corrected
+            # chi2 computed above; an earlier fallback dropped the -1
+            # correction here, so the reported p-value disagreed with the
+            # reported statistic (e.g. 0.71 instead of 0.76).
             import math
-            z = abs(only_a - only_b) / math.sqrt(n_discordant)
-            p_value = float(math.erfc(z / math.sqrt(2)))
+            p_value = float(math.erfc(math.sqrt(chi2 / 2)))
 
     return {
         "n_queries": int(len(correct_a)),

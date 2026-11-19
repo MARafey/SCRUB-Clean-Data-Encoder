@@ -70,6 +70,11 @@ class ExperimentConfig:
     max_records: Optional[int] = None          # cap dataset size for quick runs
     train_frac: float = 0.70
     val_frac: float = 0.15                     # test_frac is the remainder
+    # "random":  seeded random permutation of rows (original behaviour).
+    # "grouped": rows with byte-identical canonical text are kept together in
+    #            ONE partition, so an address seen in training is never the
+    #            test target. The canonical index still spans every clean row.
+    split_mode: str = "random"
 
     # ---- instructions (THE experimental variable) -----------------------
     # Names resolved against instructions.INSTRUCTION_BANK.
